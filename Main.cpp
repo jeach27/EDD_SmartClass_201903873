@@ -1,8 +1,16 @@
-#include<iostream>
-#include<stdlib.h>
-#include"./Estructuras/ListaDoble.cpp"
+#include <iostream>
+#include <stdlib.h>
+#include <sstream>
+#include <fstream>
+#include "./Estructuras/ListaDoble.cpp"
+#include "./Estructuras/Cola.cpp"
+#include "./Objetos/Estudiante.cpp"
+#include "./Objetos/Tareas.cpp"
+#include "./Objetos/Errores.cpp"
+
 
 using namespace std;
+ListaDoble<Estudiante> *list = new ListaDoble<Estudiante>();
 
 void menuManual();
 void menuMUsuarios();
@@ -205,10 +213,85 @@ void menuReportes(){
 }
 
 void cargaUsuarios(){
+    string nombre;
+    cout << "\nIngrese ruta de Archivo\n" <<endl;
+    cin >> nombre;
+    ifstream archivo(nombre);
+    string linea;
+    char delimitador = ',';
+   
+    getline(archivo, linea);
+    
+    while (getline(archivo, linea)){
+        stringstream stream(linea); // Convertir la cadena a un stream
+        string Carnet, DPI,Nombre,Carrera,Password,Creditos,Edad,Correo;
+        // Extraer todos los valores de esa fila
+        getline(stream, Carnet, delimitador);
+        getline(stream, DPI, delimitador);
+        getline(stream, Nombre, delimitador);
+        getline(stream, Carrera, delimitador);
+        getline(stream, Password, delimitador);
+        getline(stream, Creditos, delimitador);
+        getline(stream, Edad, delimitador);
+        getline(stream, Correo, delimitador);
+
+        Estudiante *nuevo = new Estudiante(Carnet,DPI,Nombre,Carrera,Correo,Password,Creditos,Edad);
+        list->insertar(*nuevo);
+        /* Imprimir
+        cout << "==================" << endl;
+        cout << "Carne: " << Carnet << endl;
+        cout << "DPI: " << DPI << endl;
+        cout << "Nombre: " << Nombre << endl;
+        cout << "Carrera: " << Carrera << endl;
+        cout << "Password: " << Password << endl;
+        cout << "Edad: " << Edad << endl;
+        cout << "Correo: " << Correo << endl;
+        */
+    }
+    archivo.close();
+    system("pause");
+    
 
 }
 
 void cargaTareas(){
+    string nombre;
+    cout << "\nIngrese ruta de Archivo\n" <<endl;
+    cin >> nombre;
+    ifstream archivo(nombre);
+    string linea;
+    char delimitador = ',';
+   
+    getline(archivo, linea);
+    
+    while (getline(archivo, linea)){
+        stringstream stream(linea); // Convertir la cadena a un stream
+        string Mes,Dia,Hora,Carnet,Nombre,Descripcion,Materia,Fecha,Estado;
+        // Extraer todos los valores de esa fila
+        getline(stream, Mes, delimitador);
+        getline(stream, Dia, delimitador);
+        getline(stream, Hora, delimitador);
+        getline(stream, Carnet, delimitador);
+        getline(stream, Nombre, delimitador);
+        getline(stream, Descripcion, delimitador);
+        getline(stream, Materia, delimitador);
+        getline(stream, Fecha, delimitador);
+        getline(stream, Estado, delimitador);
+        /* Imprimir
+        cout << "==================" << endl;
+        cout << "Mes: " << Mes << endl;
+        cout << "Dia: " << Dia << endl;
+        cout << "Hora: " << Hora << endl;
+        cout << "Carne: " << Carnet << endl;
+        cout << "Nombre: " << Nombre << endl;
+        cout << "Descripcion: " << Descripcion << endl;
+        cout << "Materia: " << Materia << endl;
+        cout << "Fecha: " << Fecha << endl;
+        cout << "Estado: " << Estado << endl;
+        */
+    }
+    archivo.close();
+    system("pause");
 
 }
 

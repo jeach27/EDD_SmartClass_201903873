@@ -16,13 +16,13 @@ public:
     string Carrera;
     string Correo;
     string Password;
-    int Creditos;
-    int Edad;
-    Estudiante(string,string,string,string,string,string,int,int);
+    string Creditos;
+    string Edad;
+    Estudiante(string,string,string,string,string,string,string,string);
     ~Estudiante();
 };
 
-Estudiante::Estudiante(string carne,string dpi,string nombre,string carrera,string correo,string password,int creditos,int edad)
+Estudiante::Estudiante(string carne,string dpi,string nombre,string carrera,string correo,string password,string creditos,string edad)
 {
     this->Carne = carne;
     this->DPI = dpi;

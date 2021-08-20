@@ -12,13 +12,12 @@ public:
     T valor;
     NodoLista * siguiente;
     NodoLista * anterior;
-    NodoLista(T Valor);
+    NodoLista(T);
     ~NodoLista();
 };
 
 template <typename T>
-NodoLista<T>::NodoLista(T Valor)
-{
+NodoLista<T>::NodoLista(T Valor){
     this->valor = Valor;
     this->siguiente = NULL;
     this->anterior = NULL;
