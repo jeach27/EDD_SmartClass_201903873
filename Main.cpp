@@ -10,7 +10,8 @@
 
 
 using namespace std;
-ListaDoble<Estudiante> *list = new ListaDoble<Estudiante>();
+//ListaDoble<Estudiante> *listaE = new ListaDoble<Estudiante>();
+//ListaDoble<Tareas> *listaT = new ListaDoble<Tareas>();
 
 void menuManual();
 void menuMUsuarios();
@@ -235,9 +236,9 @@ void cargaUsuarios(){
         getline(stream, Edad, delimitador);
         getline(stream, Correo, delimitador);
 
-        Estudiante *nuevo = new Estudiante(Carnet,DPI,Nombre,Carrera,Correo,Password,Creditos,Edad);
-        list->insertar(*nuevo);
-        /* Imprimir
+        //Estudiante *nuevo = new Estudiante(Carnet,DPI,Nombre,Carrera,Correo,Password,Creditos,Edad);
+        //listaE->insertar(*nuevo);
+        // Imprimir
         cout << "==================" << endl;
         cout << "Carne: " << Carnet << endl;
         cout << "DPI: " << DPI << endl;
@@ -246,7 +247,7 @@ void cargaUsuarios(){
         cout << "Password: " << Password << endl;
         cout << "Edad: " << Edad << endl;
         cout << "Correo: " << Correo << endl;
-        */
+        
     }
     archivo.close();
     system("pause");
@@ -277,7 +278,7 @@ void cargaTareas(){
         getline(stream, Materia, delimitador);
         getline(stream, Fecha, delimitador);
         getline(stream, Estado, delimitador);
-        /* Imprimir
+        // Imprimir
         cout << "==================" << endl;
         cout << "Mes: " << Mes << endl;
         cout << "Dia: " << Dia << endl;
@@ -288,7 +289,7 @@ void cargaTareas(){
         cout << "Materia: " << Materia << endl;
         cout << "Fecha: " << Fecha << endl;
         cout << "Estado: " << Estado << endl;
-        */
+        
     }
     archivo.close();
     system("pause");
