@@ -1,0 +1,32 @@
+digraph G{
+graph [pad="0.5", nodesep="0.5", ranksep="2"];
+  node [shape=plain]
+  rankdir=LR; 
+Foo [label=< 
+<table border="0" cellborder="1" cellspacing="0">
+<tr>
+<td>wenas</td>
+<td>1</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>1</td>
+<td> </td>
+<td>dias</td>
+<td> </td>
+</tr>
+<tr>
+<td>4</td>
+<td>prros</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>9</td>
+<td> </td>
+<td> </td>
+<td>noshes</td>
+</tr>
+</table>>];
+}

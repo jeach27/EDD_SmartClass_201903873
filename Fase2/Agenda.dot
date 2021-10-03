@@ -1,0 +1,13 @@
+digraph G{
+rankdir="LR";
+<Estructuras.ListaDoble.nodo object at 0x000002621992EE20>[label="{{ Carne: 20910 | Nombre: joaquin | Descripcion: bien | Materia: mate | Fecha: hjoy | Hora: 12 | Estado: ya }}",shape=Mrecord]
+<Estructuras.ListaDoble.nodo object at 0x0000026219A717C0>[label="{{ Carne: 20910 | Nombre: joaquin | Descripcion: bien | Materia: mate | Fecha: hjoy | Hora: 12 | Estado: ya }}",shape=Mrecord]
+<Estructuras.ListaDoble.nodo object at 0x0000026219A71970>[label="{{ Carne: 20910 | Nombre: joaquin | Descripcion: bien | Materia: mate | Fecha: hjoy | Hora: 12 | Estado: ya }}",shape=Mrecord]
+<Estructuras.ListaDoble.nodo object at 0x0000026219A71A00>[label="{{ Carne: 20910 | Nombre: joaquin | Descripcion: bien | Materia: mate | Fecha: hjoy | Hora: 12 | Estado: ya }}",shape=Mrecord]
+<Estructuras.ListaDoble.nodo object at 0x000002621992EE20>-><Estructuras.ListaDoble.nodo object at 0x0000026219A717C0>
+<Estructuras.ListaDoble.nodo object at 0x0000026219A717C0>-><Estructuras.ListaDoble.nodo object at 0x000002621992EE20>
+<Estructuras.ListaDoble.nodo object at 0x0000026219A717C0>-><Estructuras.ListaDoble.nodo object at 0x0000026219A71970>
+<Estructuras.ListaDoble.nodo object at 0x0000026219A71970>-><Estructuras.ListaDoble.nodo object at 0x0000026219A717C0>
+<Estructuras.ListaDoble.nodo object at 0x0000026219A71970>-><Estructuras.ListaDoble.nodo object at 0x0000026219A71A00>
+<Estructuras.ListaDoble.nodo object at 0x0000026219A71A00>-><Estructuras.ListaDoble.nodo object at 0x0000026219A71970>
+}
