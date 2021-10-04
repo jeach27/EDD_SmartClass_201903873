@@ -1,3 +1,4 @@
+
 class Nodo:
     def __init__(self, x, y, codigo):
         self.x = x
@@ -44,10 +45,24 @@ class Matriz:
             nuevo = self.insertarOrdenFila(columna,nuevo)
 
     def verificarNodo(self,x,y):
-        pass
+        enX = self.buscarColumna(x)
+        enY = self.buscarFila(y)
+        if enX == None or enY == None:
+            return False
+        else:
+            buscado = self.verificarNodo2(x,y)
+            if buscado != None:
+                return buscado
+            else:
+                return False
 
     def verificarNodo2(self,x,y):
-        pass
+        aux = self.buscarColumna(x)
+        while aux != None:
+            if aux.x == x and aux.y == y:
+                return aux
+            aux = aux.abajo
+        return None
 
     def buscarColumna(self,x):
         aux = self.raiz
@@ -126,10 +141,4 @@ class Matriz:
             nuevo.arriba = aux
 
         return nuevo
-
-    def nodoH(self,nuevo):
-        pass
-
-    def nodoV(self,nuevo):
-        pass
 

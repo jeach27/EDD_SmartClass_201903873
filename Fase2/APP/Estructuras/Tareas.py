@@ -8,4 +8,5 @@ class tarea:
         self.fecha = fecha
         self.hora = hora
         self.estado = estado
+        self.posicion = None
         

@@ -98,3 +98,15 @@ class AVL:
                 }
             )
             self.enOrden2(raizActual.der.raiz , arr )
+    
+    def Orden(self,buscado):
+        return self.Orden2(self.raiz,buscado)
+
+    def Orden2(self,raizActual,buscado):
+        if raizActual:
+            self.Orden2(raizActual.izq.raiz , buscado)
+            if raizActual.id == buscado:
+                return raizActual
+            self.Orden2(raizActual.der.raiz,buscado)
+        return None 
+        
